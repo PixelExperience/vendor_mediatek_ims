@@ -1,0 +1,30 @@
+cc_library_shared {
+    name: "libmtkperf_client_vendor",
+
+    srcs: ["mtkperf_lock.cpp"],
+
+    shared_libs: [
+        "liblog",
+        "libhidlbase",
+        "libutils",
+        "vendor.mediatek.hardware.mtkpower@1.0",
+    ],
+
+    proprietary: true,
+    owner: "mtk",
+}
+
+cc_library_shared {
+    name: "libmtkperf_client",
+
+    srcs: ["mtkperf_lock.cpp"],
+
+    shared_libs: [
+        "liblog",
+        "libhidlbase",
+        "libutils",
+        "vendor.mediatek.hardware.mtkpower@1.0",
+    ],
+
+    owner: "mtk",
+}
